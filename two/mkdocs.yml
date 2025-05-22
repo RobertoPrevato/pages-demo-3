@@ -1,0 +1,82 @@
+site_name: Demo Two
+site_author: Roberto Prevato
+site_description: Demo One
+
+nav:
+  - Overview: index.md
+  - About: about.md
+  - Docs home: "/"
+
+theme:
+  features:
+    - navigation.footer
+    - content.code.copy
+    - content.action.view
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  name: "material"
+  custom_dir: overrides/
+  favicon: img/favicon.ico
+  logo: img/logow.svg
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  version: 2
+  is_current_version: true
+
+extra_css:
+  - css/neoteroi.css
+  - css/extra.css?v=20221120
+
+extra_javascript:
+  - js/fullscreen.js
+
+plugins:
+  - search
+  - neoteroi.contribs:
+      enabled_by_env: "GIT_CONTRIBS_ON"
+
+validation:
+  links:
+    absolute_links: ignore
+
+watch:
+  - docs
+  - overrides
+
+markdown_extensions:
+  - admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - pymdownx.blocks.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      use_pygments: true
+      guess_lang: false
+      anchor_linenums: true
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - neoteroi.timeline
+  - neoteroi.cards
+  - neoteroi.projects
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

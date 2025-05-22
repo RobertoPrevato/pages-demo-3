@@ -1,0 +1,59 @@
+site_name: Demo Home
+site_author: Roberto Prevato
+site_description: Welcome page for the multi-site docs demo
+edit_uri: ""
+
+nav:
+  - Index: index.md
+  - One: /one/
+  - Two: /two/
+  - Three: /three/
+
+theme:
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  name: "material"
+  custom_dir: overrides/
+  highlightjs: true
+  favicon: img/neoteroi.ico
+  logo: img/neoteroi-w.svg
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+plugins: []
+
+extra_css:
+  - css/extra.css
+  - css/neoteroi.css
+
+markdown_extensions:
+  - admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - neoteroi.timeline
+  - neoteroi.cards
+  - neoteroi.projects
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

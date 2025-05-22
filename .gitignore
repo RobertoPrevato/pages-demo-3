@@ -1,0 +1,12 @@
+site
+venv
+.build
+.env
+site.zip
+deploy
+out
+.local
+
+# temporary
+shared-assets
+copy-shared.sh
