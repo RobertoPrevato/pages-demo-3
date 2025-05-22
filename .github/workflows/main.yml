@@ -47,6 +47,7 @@ jobs:
 
       - name: Build docs
         run: |
+          chmod +x ./pack.sh
           ./pack.sh
 
       - name: Upload artifact
