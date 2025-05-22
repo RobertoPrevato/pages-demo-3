@@ -5,9 +5,9 @@ edit_uri: ""
 
 nav:
   - Index: index.md
-  - One: /one/
-  - Two: /two/
-  - Three: /three/
+  - One: one/
+  - Two: two/
+  - Three: three/
 
 theme:
   palette:

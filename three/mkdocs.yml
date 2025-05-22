@@ -5,7 +5,7 @@ site_description: Demo One
 nav:
   - Overview: index.md
   - About: about.md
-  - Docs home: "/"
+  - Docs home: "/pages-demo-3/"
 
 theme:
   features:
